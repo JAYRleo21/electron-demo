@@ -1,0 +1,53 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "Instalar dependencias de nodejs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "author": "JAYRleo",
+  "license": "ISC",
+  "build": {
+    "appId": "electron-demov1",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Apllications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/electorn-logo.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^6.0.12",
+    "electron-builder": "^20.44.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jayrleo@bitbucket.org/jayrleo/electron-demo.git"
+  },
+  "homepage": "https://bitbucket.org/jayrleo/electron-demo#readme"
+}
